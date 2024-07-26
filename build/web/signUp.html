@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/signup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>WeBaseOne</title>
+</head>
+
+<body>
+<div class="container">
+    <div class="frame">
+        <div class="nav">
+            <ul class="links text-center">
+                <li class="signin-active">
+                    <span style="color: black; font-weight: bold; text-transform: uppercase; font-size: 18px;">SignUp</span>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <form action="SignUpServlet" method="post" onsubmit="return validateForm();">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control form-styling" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control form-styling" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control form-styling" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control form-styling" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" class="form-control form-styling" id="confirm-password" name="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn-primary">SignUp</button>
+                <button class="btn-primary" type="button" onclick="window.location.href='index.jsp';">Cancel</button>
+                <div class="sign-up">Have an account ? <a href="loginForm.jsp">Click Here</a></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="signup.js"></script>
+</body>
+</html>
